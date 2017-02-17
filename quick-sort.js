@@ -2,9 +2,11 @@ var stackDepth = 0;
 
 function quicksort(data, low, high, _depth) {
   stackDepth = stackDepth + _depth;
-  if ( low < high ) {
-    var partitioned_index = _place_pivot_in_its_place(data, low, high);
+  var partitioned_index = _place_pivot_in_its_place(data, low, high);
+  if (low < partitioned_index) {
     quicksort(data, low, partitioned_index, 1);
+  }
+  if (partitioned_index + 1 < high) {
     quicksort(data, partitioned_index + 1, high, 0);
   }
 }
