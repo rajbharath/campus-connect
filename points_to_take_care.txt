@@ -1,2 +1,3 @@
 1. recursive call - stack depth to be taken care.
 2. taking out the condition out of recursion reduces the stack depth by half.
+3. Reduced the number of swapping by implementing the hoare partitioning method. Prior to this lomuto partition method was used.
